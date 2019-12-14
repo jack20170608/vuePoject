@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="lib/node_modules/vue/dist/vue.min.js"></script>
+    <style>
+        .black {
+            background: #00FF00;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
@@ -17,12 +22,24 @@
     <!-- input(radio, text, address, email....)   select    checkbox   textarea   -->
 
     <input type="text" v-model="msg">
+    <hr>
+    <input type="text" v-bind:value="msg">
+    <input type="text" value="123342">
+
+    <hr>
+    <input type="text" v-bind:class="classMsg" v-bind:style="styleMsg" value="black background">
+    <hr>
+    <div v-text="htmlMsg"></div>
+    <div v-html="htmlMsg"></div>
 </div>
 <script>
     var vm = new Vue({
         el:'#app',
         data:{
-            msg:'hello world!!!'
+            msg:'hello world!!!',
+            htmlMsg : '<h3>Hello World</h3>',
+            classMsg : 'black',
+            styleMsg : 'color:red'
         },
         methods:{
 
@@ -30,5 +47,6 @@
     })
     console.log(vm);
 </script>
+
 </body>
 </html>

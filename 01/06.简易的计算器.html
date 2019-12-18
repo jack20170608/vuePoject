@@ -18,7 +18,7 @@
 
     <input type="text" v-model="n2">
 
-    <input type="button" value="=" @click="calc">
+    <input type="button" value="=" @click.stop="calc">
 
     <input type="text" v-model="result">
 </div>
@@ -49,7 +49,7 @@
 //                        break;
 //                }
                 // 注意：这是投机取巧的方式，正式开发中，尽量少用
-                var codeStr = 'parseInt(this.n1)' + this.opt + 'parseInt(this.n2)'
+                var codeStr = 'parseInt(this.n1)' + this.opt + 'parseInt(this.n2)';
                 this.result = eval(codeStr)
             }
         }

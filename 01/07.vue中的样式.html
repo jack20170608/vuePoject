@@ -19,6 +19,12 @@
         .active{
             letter-spacing: 0.5em;
         }
+        .blue {
+            color: blue;
+        }
+        .big {
+            letter-spacing: 1em;
+        }
     </style>
 </head>
 <body>
@@ -37,6 +43,8 @@
     引号，也可不带引号，所以 这里我没写引号；  属性的值 是一个标识符 -->
     <h1 :class="classObj">这是一个H1反反复复</h1>
 
+    <h1 :class="jackClassObj">This is from Jack's classObject</h1>
+
 </div>
 
 <script>
@@ -44,7 +52,8 @@
         el:'#app',
         data:{
             flag:true,
-            classObj:{red:true,thin:true,italiv:false,active:false}
+            classObj:{red:true,thin:true,italiv:false,active:false},
+            jackClassObj : {blue: true, bold: true }
         },
         methods:{
 

@@ -28,7 +28,7 @@
     <!-- 注意： key 在使用的时候，必须使用 v-bind 属性绑定的形式，指定 key 的值 -->
     <!-- 在组件中，使用v-for循环的时候，或者在一些特殊情况中，如果 v-for 有问题，必须 在使用 v-for 的同时，指定 唯一的 字符串/数字 类型 :key 值 -->
     <p v-for="item in list" :key="item.id">
-        <input type="checkbox">{{item.id}} --- {{item.name}}
+        <input type="checkbox" name="people" v-bind:value="item.id">{{item.id}} --- {{item.name}}
     </p>
 </div>
 

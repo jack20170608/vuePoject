@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./lib/vue.min.js"></script>
-    <link rel="stylesheet" href="./lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./lib/vue-2.4.0.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap-3.3.7.css">
     <!-- 需要用到Jquery吗？？？ -->
 </head>
 
@@ -96,7 +96,8 @@
                 // 5. 当我们意识到上面的第四步的时候，就证明大家已经入门Vue了，我们更多的是在进行 VM中 Model 数据的操作，同时，在操作Model数据的时候，指定的业务逻辑操作；
 
                 var car = { id: this.id, name: this.name, ctime: new Date() }
-                this.list.push(car)
+                this.list.push(car);
+                //Clear the box
                 this.id = this.name = ''
             },
             del(id) { // 根据Id删除数据

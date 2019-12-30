@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="lib/vue.min.js"></script>
+    <script src="lib/vue-2.4.0.js"></script>
 </head>
 <body>
 <div id="app">
-    <p>{{ msg | msgFormat('纳尼吖') | test}}</p>
+    <p>{{ msg | msgFormat('纳尼吖') | test | test2('0') }}</p>
 </div>
 <script>
 
@@ -15,7 +15,11 @@
     Vue.filter('msgFormat', function (msg,arg) {
         // 字符串的  replace 方法，第一个参数，除了可写一个 字符串之外，还可以定义一个正则
        return msg.replace(/什么/g,arg)
-    })
+    });
+
+    Vue.filter('test2', function (msg,arg) {
+        return msg.replace(/\?/g,arg)
+    });
 
     Vue.filter('test', function (msg) {
         return msg + '==========='
@@ -23,7 +27,8 @@
     var vam = new Vue({
         el:'#app',
         data:{
-            msg:'你在干什么哦,什么什么哦，到底干什么哦'
+            msg:'你在干什么哦,什么什么哦，到底干什么哦 1233 ' +
+                '  什么东东?????'
         },
         methods:{
 

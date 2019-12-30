@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecf33a02-9c1b-4d09-a8b7-a4e447c06658" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01/13.v-for循环中key属性的使用.html" beforeDir="false" afterPath="$PROJECT_DIR$/01/13.v-for循环中key属性的使用.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02/01.品牌列表案例.html" beforeDir="false" afterPath="$PROJECT_DIR$/02/01.品牌列表案例.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02/02.品牌列表案例2.html" beforeDir="false" afterPath="$PROJECT_DIR$/02/02.品牌列表案例2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02/03.过滤器的基本使用.html" beforeDir="false" afterPath="$PROJECT_DIR$/02/03.过滤器的基本使用.html" afterDir="false" />
     </list>
     <list id="63aee040-00b3-4281-9af0-84d42193c683" name="Rejected commit: Default" comment="Rejected commit: Default" />
     <ignored path="vuePoject.iws" />
@@ -31,17 +28,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02/02.品牌列表案例2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state relative-caret-position="-357">
+              <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/02/03.过滤器的基本使用.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02/01.品牌列表案例.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1513">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="578">
+              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
             </state>
           </provider>
         </entry>
@@ -76,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/03/09.组件-创建组件的方式.html" />
         <option value="$PROJECT_DIR$/03/09.组件-创建组件的方式2.html" />
         <option value="$PROJECT_DIR$/03/08.组件-创建组件的方式1.html" />
         <option value="$PROJECT_DIR$/03/10.组件-创建组件的方式3.html" />
@@ -127,6 +132,7 @@
         <option value="$PROJECT_DIR$/01/13.v-for循环中key属性的使用.html" />
         <option value="$PROJECT_DIR$/02/01.品牌列表案例.html" />
         <option value="$PROJECT_DIR$/02/02.品牌列表案例2.html" />
+        <option value="$PROJECT_DIR$/02/03.过滤器的基本使用.html" />
       </list>
     </option>
   </component>
@@ -274,7 +280,7 @@
       <workItem from="1576412703439" duration="1165000" />
       <workItem from="1576672779691" duration="4176000" />
       <workItem from="1577535756094" duration="2597000" />
-      <workItem from="1577701273798" duration="637000" />
+      <workItem from="1577701273798" duration="1364000" />
     </task>
     <task id="LOCAL-00001" summary="2019/4/25">
       <created>1556160534368</created>
@@ -301,13 +307,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18434000" />
+    <option name="totallyTimeSpent" value="19161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49369085" visible="true" weight="0.21055438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49369085" visible="true" weight="0.24626866" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50630915" side_tool="true" weight="0.24963397" />
       <window_info id="Designer" order="3" />
@@ -382,13 +388,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/04/03.组件-父组件向子组件传值.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://G:/文件/vue/day4/代码/code/04.组件-父组件把方法传递给子组件.html" />
     <entry file="file://$PROJECT_DIR$/04/04.组件-父组件把方法传递给子组件.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -573,17 +572,24 @@
     <entry file="file://$PROJECT_DIR$/01/15.今天内容的总结和回顾.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/02/02.品牌列表案例2.html">
+    <entry file="file://$PROJECT_DIR$/02/01.品牌列表案例.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="578">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02/01.品牌列表案例.html">
+    <entry file="file://$PROJECT_DIR$/02/02.品牌列表案例2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1513">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="-357">
+          <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02/03.过滤器的基本使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
         </state>
       </provider>
     </entry>

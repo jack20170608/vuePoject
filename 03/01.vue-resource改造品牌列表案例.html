@@ -17,7 +17,7 @@
         <div class="panel-body" form-inline>
             <label>
                 Name:
-                <input type="text" v-model="name"  class="form-control">
+                <input type="text" v-model="name" class="form-control">
             </label>
             <input type="button" value="添加" @click="add" class="btn btn-primary">
         </div>
@@ -25,22 +25,22 @@
 
     <table class="table table-bordered table-hover table-striped">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Ctime</th>
-                <th>Operation</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Ctime</th>
+            <th>Operation</th>
+        </tr>
         </thead>
         <tbody>
-            <tr v-for="item in list" :key="item.id">
-                <td>{{item.id}}</td>
-                <td>{{item.name}}</td>
-                <td>{{item.ctime}}</td>
-                <td>
-                    <a href="#" @click.prevent="del(item.id)">删除</a>
-                </td>
-            </tr>
+        <tr v-for="item in list" :key="item.id">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.ctime}}</td>
+            <td>
+                <a href="#" @click.prevent="del(item.id)">删除</a>
+            </td>
+        </tr>
         </tbody>
     </table>
 </div>
@@ -52,19 +52,19 @@
     Vue.http.options.emulateJSON = true;
 
     var vm = new Vue({
-        el:'#app',
-        data:{
-            name:'',
-            list:[
-                {id:1,name:'五菱宏光',ctime:new Date()},
-                {id:2,name:'众泰',ctime:new Date()}
+        el: '#app',
+        data: {
+            name: '',
+            list: [
+                {id: 1, name: '五菱宏光', ctime: new Date()},
+                {id: 2, name: '众泰', ctime: new Date()}
             ]
         },
-        created(){// 当 vm 实例 的 data 和 methods 初始化完毕后，vm实例会自动执行created 这个生命周期函数
+        created() {// 当 vm 实例 的 data 和 methods 初始化完毕后，vm实例会自动执行created 这个生命周期函数
             this.getAllList()
         },
-        methods:{
-            getAllList(){// 获取所有的品牌列表
+        methods: {
+            getAllList() {// 获取所有的品牌列表
                 // 分析：
                 // 1. 由于已经导入了 Vue-resource这个包，所以 ，可以直接通过  this.$http 来发起数据请求
                 // 2. 根据接口API文档，知道，获取列表的时候，应该发起一个 get 请求
@@ -76,14 +76,14 @@
                 this.$http.get('api/getprodlist').then(result => {
                     // 注意： 通过 $http 获取到的数据，都在 result.body 中放着
                     var result = result.body
-                    if(result.status === 0){
-                    this.list = result.message
-                }else{
-                    alert('失败了')
-                }
+                    if (result.status === 0) {
+                        this.list = result.message
+                    } else {
+                        alert('失败了')
+                    }
                 })
             },
-            add(){  // 添加品牌列表到后台服务器
+            add() {  // 添加品牌列表到后台服务器
                 // 分析：
                 // 1. 听过查看 数据API接口，发现，要发送一个 Post 请求，  this.$http.post
                 // 2. this.$http.post() 中接收三个参数：
@@ -93,24 +93,24 @@
                 // 将数据提交给服务器 application/x-www-form-urlencoded
                 // 3. 在 post 方法中，使用 .then 来设置成功的回调函数，如果想要拿到成功的结果，需要 result.body
 
-                this.$http.post('api/addproduct', {name:this.name}
-                .then(result => {
-                if(result.body.status === 0){
-                    // 成功了！
-                    // 添加完成后，只需要手动，再调用一下 getAllList 就能刷新品牌列表了
-                    this.getAllList()
-                }else{
-                    alert('失败了')
-                }
-                })
+                this.$http.post('api/addproduct', {name: this.name})
+                    .then(result => {
+                        if (result.body.status === 0) {
+                            // 成功了！
+                            // 添加完成后，只需要手动，再调用一下 getAllList 就能刷新品牌列表了
+                            this.getAllList()
+                        } else {
+                            alert('失败了')
+                        }
+                    });
             },
-            del(id){
-                this.$http.get('api/delproduct/'+id).then(result => {
-                    if(result.body.status === 0){
-                    this.getAllList()
-                }else{
-                    alert('失败了')
-                }
+            del(id) {
+                this.$http.get('api/delproduct/' + id).then(result => {
+                    if (result.body.status === 0) {
+                        this.getAllList()
+                    } else {
+                        alert('失败了')
+                    }
                 })
             }
         }

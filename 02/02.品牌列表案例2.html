@@ -74,7 +74,7 @@
 
 
 <div id="app2">
-    <h3 v-color="'pink'" v-fontweight="900" v-fontsize="50">{{ dt | dateFormat }}</h3>
+    <h3 v-cloak v-color="'pink'" v-fontweight="900" v-fontsize="50">{{ dt | dateFormat }}</h3>
 </div>
 
 <script>
@@ -96,11 +96,11 @@
         if (pattern.toLowerCase() === 'yyyy-mm-dd') {
             return `${y}-${m}-${d}`
         } else {
-            var hh = dt.getHours()
-            var mm = dt.getMinutes()
-            var ss = dt.getSeconds()
+            var hh = dt.getHours();
+            var mm = dt.getMinutes();
+            var ss = dt.getSeconds();
 
-            return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+            return `${y}-${m}-${d} ${hh}:${mm}:${ss}`;
         }
     })
 
@@ -124,7 +124,7 @@
             // 和JS行为有关的操作，最好在 inserted 中去执行，放置 JS行为不生效
         },
         updated: function (el) {  // 当VNode更新的时候，会执行 updated， 可能会触发多次
-
+            console.log('1212');
         }
     })
 
@@ -154,7 +154,8 @@
             keywords: '', // 搜索的关键字
             list: [
                 { id: 1, name: '奔驰', ctime: new Date() },
-                { id: 2, name: '宝马', ctime: new Date() }
+                { id: 2, name: '宝马', ctime: new Date() },
+                { id: 3, name: '奥迪', ctime: new Date() }
             ]
         },
         methods: {
@@ -190,7 +191,7 @@
                             if (item.id == id) {
                     return true;
                 }
-            })
+            });
 
                 // console.log(index)
                 this.list.splice(index, 1)

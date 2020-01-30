@@ -9,7 +9,7 @@
         /* v-enter 【这是一个时间点】 是进入之前，元素的起始状态，此时还没有开始进入 */
         /* v-leave-to 【这是一个时间点】 是动画离开之后，离开的终止状态，此时，元素 动画已经结束了 */
         .v-enter,
-        .v-leave-to{
+        .v-leave-to {
             opacity: 0;
             transform: translateX(80px);
         }
@@ -17,20 +17,20 @@
         /* v-enter-active 【入场动画的时间段】 */
         /* v-leave-active 【离场动画的时间段】 */
         .v-enter-active,
-        .v-leave-active{
+        .v-leave-active {
             transition: all 0.8s ease;
         }
 
-/*#########################################*/
+        /*#########################################*/
 
         .my-enter,
-        .my-leave-to{
+        .my-leave-to {
             opacity: 0;
             transform: translateY(80px);
         }
 
         .my-enter-active,
-        .my-leave-active{
+        .my-leave-active {
             transition: all 0.8s ease;
         }
     </style>
@@ -53,12 +53,12 @@
 </div>
 <script>
     var vm = new Vue({
-        el:'#app',
-        data:{
-            flag:false,
-            flag2:false
+        el: '#app',
+        data: {
+            flag: false,
+            flag2: false
         },
-        methods:{}
+        methods: {}
     })
 </script>
 </body>

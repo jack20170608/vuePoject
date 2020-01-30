@@ -13,10 +13,10 @@
     <cmt-box @func="loadComments"></cmt-box>
 
     <ul class="list-group">
-       <li class="list-group-item" v-for="item in list" :key="item.id">
-           <span class="badge">评论人：{{ item.user }}</span>
-           {{ item.content }}
-       </li>
+        <li class="list-group-item" v-for="item in list" :key="item.id">
+            <span class="badge">评论人：{{ item.user }}</span>
+            {{ item.content }}
+        </li>
     </ul>
 </div>
 
@@ -43,15 +43,15 @@
 <script>
 
     var commentBox = {
-        data(){
+        data() {
             return {
-                user:'',
-                content:''
+                user: '',
+                content: ''
             }
         },
-        template:'#tmp1',
-        methods:{
-            postComment(){// 发表评论的方法
+        template: '#tmp1',
+        methods: {
+            postComment() {// 发表评论的方法
                 // 分析：发表评论的业务逻辑
                 // 1. 评论数据存到哪里去？？？   存放到了 localStorage 中  localStorage.setItem('cmts', '')
                 // 2. 先组织出一个最新的评论数据对象
@@ -62,14 +62,14 @@
                 //  3.3 如果获取到的 localStorage 中的 评论字符串，为空不存在， 则  可以 返回一个 '[]'  让 JSON.parse 去转换
                 //  3.4  把 最新的  评论列表数组，再次调用 JSON.stringify 转为  数组字符串，然后调用 localStorage.setItem()
 
-                var comment = {id:Date.now(),user:this.user,content:this.content}
+                var comment = {id: Date.now(), user: this.user, content: this.content}
 
                 // 从 localStorage 中获取所有的评论
-             var list =  JSON.parse(  localStorage.getItem('cmts') || '[]')
-                list.unshift(comment)
+                var list = JSON.parse(localStorage.getItem('cmts') || '[]');
+                list.unshift(comment);
                 // 重新保存最新的 评论数据
-                localStorage.setItem('cmts',JSON.stringify(list))
-                this.user = this.content = ''
+                localStorage.setItem('cmts', JSON.stringify(list));
+                this.user = this.content = '';
 
                 // this.loadComments() // ?????
                 this.$emit('func')
@@ -78,30 +78,27 @@
     }
 
     var vm = new Vue({
-        el:'#app',
-        data:{
-            list:[
-                {id:Date.now(),user:'李白',content:'天生我材必有用'},
-                {id:Date.now(),user:'江小白',content:'劝君更进一杯酒'},
-                {id:Date.now(),user:'小马',content:'我姓马，风吹草地见牛羊的马'}
+        el: '#app',
+        data: {
+            list: [
+                {id: Date.now(), user: '李白', content: '天生我材必有用'},
+                {id: Date.now(), user: '江小白', content: '劝君更进一杯酒'},
+                {id: Date.now(), user: '小马', content: '我姓马，风吹草地见牛羊的马'}
             ]
         },
-        beforeCreate(){ // 注意：这里不能调用 loadComments 方法，因为在执行这个钩子函数的时候，data 和 methods 都还没有被初始化好
+        beforeCreate() { // 注意：这里不能调用 loadComments 方法，因为在执行这个钩子函数的时候，data 和 methods 都还没有被初始化好
 
         },
-        created(){
-          this.loadComments()
+        created() {
+            this.loadComments()
         },
-        methods:{
-            loadComments(){  // 从 localStorage 中获取所有的评论
-                var list =  JSON.parse(  localStorage.getItem('cmts') || '[]')
-                this.list = list
-
-
+        methods: {
+            loadComments() {  // 从 localStorage 中获取所有的评论
+                this.list = JSON.parse(localStorage.getItem('cmts') || '[]');
             }
         },
-        components:{
-            'cmt-box':commentBox
+        components: {
+            'cmt-box': commentBox
         }
     })
 </script>

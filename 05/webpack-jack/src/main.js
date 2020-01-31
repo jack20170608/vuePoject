@@ -7,10 +7,10 @@ import $ from 'jquery'
 
 $(function () {
     $("li:odd")
-        .css('backgroundColor', 'lightblue');
+        .css('backgroundColor', 'red');
     $("li:even")
         .css('backgroundColor', function () {
-            return '#' + 'FFFF00';
+            return '#' + '0000FF';
         });
 });
 

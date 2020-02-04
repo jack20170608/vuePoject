@@ -14,3 +14,6 @@ $(function () {
         });
 });
 
+//使用webpack-dev-server 工具来帮我们自动运行打包工具
+//npm i webpack-dev-server -D
+
